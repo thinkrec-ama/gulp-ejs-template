@@ -12,7 +12,7 @@ gulp.task('sass', done => {
             browsers: ['last 2 version', 'ie >= 9', 'iOS >= 7', 'Android >= 4.2'],
         }))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist/css/'));
+        .pipe(gulp.dest('public/css/'));
     done()
 });
 
@@ -20,7 +20,7 @@ gulp.task('ejs', done => {
     gulp.src(['src/ejs/**/*.ejs', '!' + 'src/ejs/layout/_*.ejs'])
         .pipe(ejs())
         .pipe(rename({extname: '.html'}))
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('public/'));
     done()
 });
 
